@@ -10,59 +10,26 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-
-    public GameObject projectilePrefab;
-    public float timeBetweenShots;
-    public float startDelay;
-
-    public float speed = 10f;
-    public float jumpForce = 8f;
-    public float groundCheckDist = 1.2f;
-
-    public Vector3 direction;
-    private Rigidbody rb;
-
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        //InvokeRepeating("SpawnBullets", startDelay, timeBetweenShots);
-        rb = GetComponent<Rigidbody>();
-    }
-
-    public void SpawnBullet()
-    {
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        if (projectile.GetComponent<Bullets>())
-        {
-            projectile.GetComponent<Bullets>();
-        }
-    }
+    public GameObject bulletPrefab;
+    public Vector3 spawnPoint = new Vector3 (-6.496347f, 1.534647f, -0.1221247f);
 
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
-    }
-
-    /// <summary>
-    /// Gets user input to move left or right
-    /// </summary>
-    private void MovePlayer()
-    {
-        //Get input to move Left
-        if (Input.GetKey(KeyCode.Space))
+        //If Space is pressed, bullets will spawn
+        if(Input.GetKey(KeyCode.Space))
         {
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
-        }
-
-        //REFERENCE
-        //Get input to move Right
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = Vector3.right;
-            //transform.position += direction * speed * Time.deltaTime;
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
+            print("Bullet has spawned");
+            ShootingBullets();
         }
     }
+
+   ///<summary>
+   /// Player shooting bullets
+   /// </summary>
+   private void ShootingBullets()
+   {
+        //Calls bulletprefab
+        Instantiate(bulletPrefab, spawnPoint, Quaternion.identity);
+   }
 }
