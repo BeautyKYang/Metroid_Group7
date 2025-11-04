@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-
     public float speed;
     public bool goingLeft;
     public float lifespan = 5f;
@@ -18,7 +17,6 @@ public class Bullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (goingLeft == true)
         {
             transform.position += speed * Vector3.left * Time.deltaTime;
@@ -27,6 +25,5 @@ public class Bullets : MonoBehaviour
         {
             transform.position += speed * Vector3.right * Time.deltaTime;
         }
-        */
     }
 }

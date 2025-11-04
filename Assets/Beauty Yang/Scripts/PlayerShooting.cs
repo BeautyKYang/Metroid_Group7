@@ -11,15 +11,15 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Vector3 spawnPoint = new Vector3 (0f, 0f, 0f);
+    public Vector3 spawnPoint = new Vector3 (0, 0, 0);
     public float spawnRate = 1f;
 
     public float timeBetweenShots = 1f;
     public float startDelay = 2f;
 
-    private void Start()
+    void Start()
     {
-        //InvokeRepeating("ShootingBullets", );
+        InvokeRepeating("ShootingBullets", startDelay, timeBetweenShots);
     }
 
     // Update is called once per frame
@@ -39,7 +39,11 @@ public class PlayerShooting : MonoBehaviour
    private void ShootingBullets()
    {
         //Calls bulletprefab
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
-        bulletPrefab.SetActive(true);
-   }
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+
+        if (bullet.GetComponent<Bullets>())
+        {
+            bullet.GetComponent<Bullets>();
+        }
+    }
 }

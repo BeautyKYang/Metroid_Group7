@@ -357,8 +357,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6160135279429933038, guid: 4f5a22800ffed544f847c39f3acd8848, type: 3}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawnRate: 1
-  timeBetweenShots: 1
-  startDelay: 0
+  timeBetweenShots: 10
+  startDelay: 1
 --- !u!54 &1353434282
 Rigidbody:
   m_ObjectHideFlags: 0
