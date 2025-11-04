@@ -11,7 +11,16 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Vector3 spawnPoint = new Vector3 (-6.496347f, 1.534647f, -0.1221247f);
+    public Vector3 spawnPoint = new Vector3 (0f, 0f, 0f);
+    public float spawnRate = 1f;
+
+    public float timeBetweenShots = 1f;
+    public float startDelay = 2f;
+
+    private void Start()
+    {
+        //InvokeRepeating("ShootingBullets", );
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,6 +39,7 @@ public class PlayerShooting : MonoBehaviour
    private void ShootingBullets()
    {
         //Calls bulletprefab
-        Instantiate(bulletPrefab, spawnPoint, Quaternion.identity);
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bulletPrefab.SetActive(true);
    }
 }
