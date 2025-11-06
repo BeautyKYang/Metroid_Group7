@@ -11,15 +11,14 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Vector3 spawnPoint = new Vector3 (0, 0, 0);
-    public float spawnRate = 1f;
-
-    public float timeBetweenShots = 1f;
+    public float timeBetweenShots = 0.5f;
     public float startDelay = 2f;
+
+    private float nextFire;
 
     void Start()
     {
-        InvokeRepeating("ShootingBullets", startDelay, timeBetweenShots);
+        nextFire = 0f;
     }
 
     // Update is called once per frame
@@ -28,8 +27,12 @@ public class PlayerShooting : MonoBehaviour
         //If Space is pressed, bullets will spawn
         if(Input.GetKey(KeyCode.Space))
         {
-            print("Bullet has spawned");
-            ShootingBullets();
+           if(Time.time >= nextFire)
+            {
+                print("Bullet has spawned");
+                ShootingBullets();
+                nextFire = Time.time + timeBetweenShots;
+            }
         }
     }
 
@@ -41,9 +44,11 @@ public class PlayerShooting : MonoBehaviour
         //Calls bulletprefab
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
 
+        /*
         if (bullet.GetComponent<Bullets>())
         {
             bullet.GetComponent<Bullets>();
         }
-    }
+        */
+   }
 }
