@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class Bullets : MonoBehaviour
 {
-    public float speed;
-    public bool goingLeft;
-    public float lifespan = 5f;
+    public GameObject regularBulletsPrefab;
+    public GameObject heavyBulletsPrefab;
 
-    //Destroy bulletbill in 5 seconds of spanning
-    public void Start()
-    {
-        Destroy(gameObject, lifespan);
-    }
+    public int RegularBullets = 1;
+    public int HeavyBullets = 3;
 
-    // Update is called once per frame
-    void Update()
+    public RegularEnemy regularEnemy;
+
+    public int lives = 1;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (goingLeft == true)
+
+        //If bullet hits the enemy the enemy dies
+        if (other.GetComponent<RegularEnemy>())
         {
-            transform.position += speed * Vector3.left * Time.deltaTime;
-        }
-        else
-        {
-            transform.position += speed * Vector3.right * Time.deltaTime;
+            Destroy(gameObject);
         }
     }
 }

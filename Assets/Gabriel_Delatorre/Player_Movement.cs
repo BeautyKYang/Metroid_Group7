@@ -9,22 +9,22 @@ public class Player_Movement : MonoBehaviour
     public float speed = 30f;
     
     private Vector3 direction;
-    private Rigidbody rb;
+    
     
 
 
     // Start is called before the first frame update
     void Start()
     {
-        MovePlayer();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
 
+     MovePlayer();
 
 
     }
@@ -37,8 +37,7 @@ public class Player_Movement : MonoBehaviour
 
             direction = Vector3.left;
 
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
-
+            transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
 
         }
         //Get input to move right
@@ -46,7 +45,7 @@ public class Player_Movement : MonoBehaviour
         {
             direction = Vector3.right;
             //transform.position += direction * speed * time.deltaTime;
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
+            transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
 
 
         }
