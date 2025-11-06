@@ -6,21 +6,31 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int life = 99;
+    public bool isBlinking = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "RegularEnemy")
+        if (isBlinking)
         {
-            life -= 15;
-            StartCoroutine(Blinking());
-            print("you lost 15 life");
+            print("invincible while blinking");
         }
-
-        if (other.gameObject.tag == "HardEnemy")
+        else
         {
-            life -= 35;
-            StartCoroutine(Blinking());
-            print("Hard enemy destroys u");
+            if (other.gameObject.tag == "RegularEnemy")
+            {
+                life -= 15;
+                StartCoroutine(Blinking());
+                print("you lost 15 life");
+                print("u now have " + life + " life.");
+            }
+
+            if (other.gameObject.tag == "HardEnemy")
+            {
+                life -= 35;
+                StartCoroutine(Blinking());
+                print("Hard enemy does 35 damage.");
+                print("u now have " + life + " life.");
+            }
         }
     }
 
@@ -39,10 +49,9 @@ public class Health : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.25f);
-
+            isBlinking = true;
         }
         GetComponent<MeshRenderer>().enabled = true;
-
-        
+        isBlinking = false;
     }
 }
