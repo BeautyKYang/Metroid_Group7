@@ -10,7 +10,8 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public Transform spawnPoint;
+    public GameObject regularBulletPrefab;
     public float timeBetweenShots = 0.5f;
     public float startDelay = 2f;
 
@@ -42,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
    private void ShootingBullets()
    {
         //Calls bulletprefab
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject bullet = Instantiate(regularBulletPrefab, spawnPoint.position, spawnPoint.rotation);
 
         /*
         if (bullet.GetComponent<Bullets>())

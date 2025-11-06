@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 355547900354439112}
   - component: {fileID: -2045869477520255395}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: RegularBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,6 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1effcbe60c2e892478a7974efa251d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  goingLeft: 0
-  lifespan: 5
+  regularBulletsPrefab: {fileID: 6160135279429933038}
+  RegularBullets: 1

@@ -1,29 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static Cinemachine.CinemachineFreeLook;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class Bullets : MonoBehaviour
 {
-    public float speed;
-    public bool goingLeft;
-    public float lifespan = 5f;
+    public GameObject regularBulletsPrefab;
 
-    //Destroy bulletbill in 5 seconds of spanning
-    public void Start()
-    {
-        Destroy(gameObject, lifespan);
-    }
+    public int RegularBullets = 1;
 
-    // Update is called once per frame
-    void Update()
+    /*
+    public void DecreaseLives()
     {
-        if (goingLeft == true)
+        //Subtract one life
+        lives--;
+
+        if (lives == 2) //1 life lost - disable first bucket
+            enemy.SetActive(false);
+        else if (lives == 1) //2 life lost - disable second bucket
+            enemy.SetActive(false);
+        else //3 life lost - disable third bucket
         {
-            transform.position += speed * Vector3.left * Time.deltaTime;
-        }
-        else
-        {
-            transform.position += speed * Vector3.right * Time.deltaTime;
+            enemy.SetActive(false);
+
+            //Load game over screen
+            SceneManager.LoadScene(2); //Or use: StartCoroutine(WaitToLoadGameOver(2f));
         }
     }
+    */
 }
