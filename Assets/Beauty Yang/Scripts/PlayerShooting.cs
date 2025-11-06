@@ -54,5 +54,5 @@ public class PlayerShooting : MonoBehaviour
         */
    }
 
-    //Note: Coroutine could have been used to spawn bullets, using the false variable & bool
+    //Note: Coroutine could have been used to spawn bullets, using the false variable & bool can also be effective
 }

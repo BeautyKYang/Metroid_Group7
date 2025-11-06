@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7435102976736670246
 Transform:
   m_ObjectHideFlags: 0
@@ -125,8 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1966151709855143241}
   lives: 1
-  leftPoint: {fileID: 2825227325462477182}
-  rightPoint: {fileID: 421335480227976155}
+  leftBounds: 5
+  rightBounds: -5
+  moveDirection: {x: 0, y: 0, z: 0}
   speed: 5
 --- !u!54 &6764150303081870128
 Rigidbody:

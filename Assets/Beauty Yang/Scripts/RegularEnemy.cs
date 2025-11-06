@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Cinemachine.CinemachineFreeLook;
 
 public class RegularEnemy : MonoBehaviour
@@ -8,8 +9,8 @@ public class RegularEnemy : MonoBehaviour
     public GameObject enemyPrefab;
     public int lives = 1;
 
-    public float leftBounds = 5f;
-    public float rightBounds = -5f;
+    public float leftBounds = 10f;
+    public float rightBounds = 15f;
     public Vector3 moveDirection;
     public float speed = 5f;
 
@@ -36,14 +37,23 @@ public class RegularEnemy : MonoBehaviour
             moveDirection *= -1;
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         //If bullet hits the enemy the enemy dies
         if (other.GetComponent<Bullets>())
         {
-            lives--; //Enemy loses a life
-            Destroy(other.gameObject);
+            print("Enemy is dead");
+            DecreaseLife(); //Enemy loses a life
+            Destroy(gameObject);
         }
     }
+
+    public void DecreaseLife()
+    {
+        //Subtract one life
+        lives--;
+        enemyPrefab.SetActive(false);
+    }
+
 }
