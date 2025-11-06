@@ -19,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Start()
     {
+        //Spaces the time when the next bullet is triggered
         nextFire = 0f;
     }
 
@@ -29,11 +30,11 @@ public class PlayerShooting : MonoBehaviour
         if(Input.GetKey(KeyCode.Space))
         {
            if(Time.time >= nextFire)
-            {
+           {
                 print("Bullet has spawned");
                 ShootingBullets();
                 nextFire = Time.time + timeBetweenShots;
-            }
+           }
         }
     }
 
@@ -52,4 +53,6 @@ public class PlayerShooting : MonoBehaviour
         }
         */
    }
+
+    //Note: Coroutine could have been used to spawn bullets, using the false variable & bool
 }

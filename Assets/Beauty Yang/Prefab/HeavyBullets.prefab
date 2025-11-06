@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6160135279429933038
+--- !u!1 &6343821354344622807
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1498162960552354902}
-  - component: {fileID: 6560624091240514289}
-  - component: {fileID: 3428071527537363220}
-  - component: {fileID: 355547900354439112}
-  - component: {fileID: -2045869477520255395}
+  - component: {fileID: 2894684894201199503}
+  - component: {fileID: 84864809976327160}
+  - component: {fileID: 2569667104278465572}
+  - component: {fileID: 3478532413986167063}
+  - component: {fileID: -3113370735217236067}
   m_Layer: 0
-  m_Name: RegularBullet
+  m_Name: HeavyBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1498162960552354902
+--- !u!4 &2894684894201199503
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160135279429933038}
+  m_GameObject: {fileID: 6343821354344622807}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70710635, z: -0, w: 0.70710725}
-  m_LocalPosition: {x: -0.051036596, y: 2.1788647, z: -0.5399204}
-  m_LocalScale: {x: 0.28812182, y: 0.29346135, z: 0.66412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.5025415, y: -0.13930473, z: 0.014129579}
+  m_LocalScale: {x: 1.41664, y: 0.36085364, z: 0.37742835}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!33 &6560624091240514289
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &84864809976327160
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160135279429933038}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3428071527537363220
+  m_GameObject: {fileID: 6343821354344622807}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2569667104278465572
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160135279429933038}
+  m_GameObject: {fileID: 6343821354344622807}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a8fc0f0d14a70644fa178265a51c61e4, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &355547900354439112
-SphereCollider:
+--- !u!65 &3478532413986167063
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160135279429933038}
+  m_GameObject: {fileID: 6343821354344622807}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -104,21 +104,21 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2045869477520255395
+--- !u!114 &-3113370735217236067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160135279429933038}
+  m_GameObject: {fileID: 6343821354344622807}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1effcbe60c2e892478a7974efa251d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regularBulletsPrefab: {fileID: 6160135279429933038}
-  heavyBulletsPrefab: {fileID: 6343821354344622807, guid: 4d1c4d10677c34445b3c013dceb07238, type: 3}
+  regularBulletsPrefab: {fileID: 6160135279429933038, guid: 4f5a22800ffed544f847c39f3acd8848, type: 3}
+  heavyBulletsPrefab: {fileID: 6343821354344622807}
   RegularBullets: 1
   HeavyBullets: 3

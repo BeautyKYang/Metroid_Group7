@@ -8,40 +8,32 @@ public class RegularEnemy : MonoBehaviour
     public GameObject enemyPrefab;
     public int lives = 1;
 
-    public Transform leftPoint;
-    public Transform rightPoint;
-    public float speed = 5;
+    public float leftBounds = 5f;
+    public float rightBounds = -5f;
+    public Vector3 moveDirection;
+    public float speed = 5f;
 
-    private Vector3 direction;
-    private Vector3 startLeftpos;
-    private Vector3 startRightpos;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        direction = Vector3.left;
-        startLeftpos = leftPoint.position;
-        startRightpos = rightPoint.position;
+        moveDirection = Vector3.left;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
-    }
+        transform.position += moveDirection * speed * Time.deltaTime;
 
-    private void Move()
-    {
-        transform.position += direction * speed * Time.deltaTime;
-
-        //Check if enemy has reached the left point to turn around
-        if (transform.position.x <= startLeftpos.x) // other way to code: (direction == Vector3.left && transform.position.x <= startLeftpos.x) //== is comparing the values of the variables
+        //Check if enemy reaches the left side bounds or is less than it
+        if (moveDirection == Vector3.left && transform.position.x <= leftBounds)
         {
-            direction = Vector3.right;
+            //Enemy goes back to the right
+            moveDirection *= -1;
         }
-        else if (transform.position.x >= startRightpos.x) //Check if enemy has reached the right point to turn around
+
+        //Check if enemy reaches the right side bounds or is greater than it
+        if (moveDirection == Vector3.right && transform.position.x >= rightBounds)
         {
-            direction = Vector3.left;
+            //Enemy goes back to the left
+            moveDirection *= -1;
         }
     }
 
