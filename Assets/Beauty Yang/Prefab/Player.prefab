@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a3df5c4e93c0c4f95152aef73c31c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6160135279429933038, guid: 4f5a22800ffed544f847c39f3acd8848, type: 3}
+  spawnPoint: {fileID: 0}
+  regularBulletPrefab: {fileID: 6160135279429933038, guid: 4f5a22800ffed544f847c39f3acd8848, type: 3}
   timeBetweenShots: 0.5
   startDelay: 2
 --- !u!54 &-1304934018417373925

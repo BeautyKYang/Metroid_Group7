@@ -44,7 +44,7 @@ public class PlayerShooting : MonoBehaviour
    private void ShootingBullets()
    {
         //Calls bulletprefab
-        GameObject bullet = Instantiate(regularBulletPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(regularBulletPrefab, spawnPoint.position, spawnPoint.rotation);
 
         /*
         if (bullet.GetComponent<Bullets>())

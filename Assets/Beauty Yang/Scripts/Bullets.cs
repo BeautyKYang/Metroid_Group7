@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
 
@@ -16,6 +17,8 @@ public class Bullets : MonoBehaviour
 
     public int lives = 1;
 
+    public float speed = 20f;
+
     private void OnTriggerEnter(Collider other)
     {
 
@@ -24,5 +27,11 @@ public class Bullets : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        //Bullets will shoot straight ahead
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
