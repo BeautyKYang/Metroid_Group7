@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = Vector3.left;
             //transform.position += direction * speed * Time.deltaTime;
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + (direction * speed * Time.deltaTime));
         }
 
         //Get input to move Right
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = Vector3.right;
             //transform.position += direction * speed * Time.deltaTime;
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + (direction * speed * Time.deltaTime));
         }
     }
 }
