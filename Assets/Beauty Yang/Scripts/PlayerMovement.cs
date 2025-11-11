@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Beauty Yang
+ * 11/10/25
+ * Handles Player movement
+ */
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -17,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     //PascalCasing = Scripts & Functions
 
     public int coins = 0;
-    public int lives = 3;
+    public int lives = 99;
+    public int gameOver = 0;
     public float deathHeight = -3f;
 
     private Vector3 respawnPos;

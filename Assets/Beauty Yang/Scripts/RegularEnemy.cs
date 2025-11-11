@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Cinemachine.CinemachineFreeLook;
 
+/*
+ * Beauty Yang
+ * 11/9/25
+ * Handles Regular Enemy movements and life
+ */
 public class RegularEnemy : MonoBehaviour
 {
     public GameObject enemyPrefab;

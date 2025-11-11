@@ -5,6 +5,11 @@ using UnityEditor;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
 
+/*
+ * Beauty Yang
+ * 11/6/25
+ * Handles Bullets and their damage
+ */
 public class Bullets : MonoBehaviour
 {
     public GameObject regularBulletsPrefab;
