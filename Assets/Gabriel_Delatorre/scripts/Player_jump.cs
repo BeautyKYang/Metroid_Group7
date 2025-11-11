@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * Gabriel Delatorre
+ * 10/10/25
+ * handles players jumping
+ */
 public class Player_jump : MonoBehaviour
 {
 
@@ -18,10 +22,10 @@ public class Player_jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpaceJump();
+        WJump();
     }
 
-    public void SpaceJump()
+    public void WJump()
     {
         RaycastHit hit;
      //if the raycast returns true then an object has been hit and the player is touching the floor
