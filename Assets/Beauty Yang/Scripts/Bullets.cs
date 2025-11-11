@@ -39,4 +39,32 @@ public class Bullets : MonoBehaviour
         //Bullets will shoot straight ahead
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+
+    /*
+ * Gabriel Delatorre
+ * 11/10/25
+ * Handles picking up heavy Bullets 
+ */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

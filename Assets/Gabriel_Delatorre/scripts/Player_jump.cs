@@ -43,7 +43,7 @@ public class Player_jump : MonoBehaviour
 
 
       //Handles Jumping 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             //add an upwards velocity to the player object causing the player to jump up 
             rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
