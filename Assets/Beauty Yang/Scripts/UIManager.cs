@@ -11,13 +11,12 @@ using UnityEngine.UI;
  */
 public class UIManager : MonoBehaviour
 {
-    public PlayerMovement playerScript;
+    public Health playerHealth;
     public TMP_Text livesText;
-    public TMP_Text gameOverText;
 
     // Update is called once per frame
     void Update()
     {
-        livesText.text = "Lives: " + playerScript.lives;
+        livesText.text = "Lives: " + playerHealth.life;
     }
 }
