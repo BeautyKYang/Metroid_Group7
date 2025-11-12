@@ -47,7 +47,14 @@ public class Health : MonoBehaviour
 
     public void RegHeal()
     {
-        life += amountHealed;
+        if (life < 99)
+        {
+            life += amountHealed;
+        }
+        else
+        {
+            print("You have full health!");
+        }
     }
 
     public void FullHeal()
