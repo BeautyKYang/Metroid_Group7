@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
 
-    public float speed = 30f;
+    public float speed = 10f;
     
     private Vector3 direction;
     
@@ -37,7 +37,7 @@ public class Player_Movement : MonoBehaviour
 
             direction = Vector3.left;
 
-            transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
+            transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
 
         }
         //Get input to move right
@@ -45,7 +45,7 @@ public class Player_Movement : MonoBehaviour
         {
             direction = Vector3.right;
             //transform.position += direction * speed * time.deltaTime;
-            transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
+            transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
 
 
         }

@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject regularBulletPrefab;
     public float timeBetweenShots = 0.5f;
     public float startDelay = 2f;
+    public GameObject HeavyBullet;
 
     private float nextFire;
 
@@ -41,7 +42,7 @@ public class PlayerShooting : MonoBehaviour
    ///<summary>
    /// Player shooting bullets
    /// </summary>
-   private void ShootingBullets()
+   public void ShootingBullets()
    {
         //Calls bulletprefab
         Instantiate(regularBulletPrefab, spawnPoint.position, spawnPoint.rotation);

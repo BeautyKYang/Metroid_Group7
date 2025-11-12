@@ -37,7 +37,7 @@ public class Bullets : MonoBehaviour
     private void Update()
     {
         //Bullets will shoot straight ahead
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
 

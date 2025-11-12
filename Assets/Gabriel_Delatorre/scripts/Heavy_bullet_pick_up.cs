@@ -16,7 +16,7 @@ public class Heavy_bullet_pick_up : MonoBehaviour
         if (other.tag == "Player")
         {
             //the player collects a bullet pack, the bullet pack is destroyed 
-            other.GetComponent<PlayerShooting>().regularBulletPrefab =heavyBullet;
+            other.GetComponent<PlayerShooting>().regularBulletPrefab = heavyBullet;
             Destroy(gameObject);
         }
     }

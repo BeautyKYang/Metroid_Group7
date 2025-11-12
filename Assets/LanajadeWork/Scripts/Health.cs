@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
 {
     public int life = 99;
     public bool isBlinking = false;
+    public int amountHealed = 20;
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (isBlinking)
         {
@@ -31,7 +32,28 @@ public class Health : MonoBehaviour
                 print("Hard enemy does 35 damage.");
                 print("u now have " + life + " life.");
             }
+
+            if (other.gameObject.tag == "Regular Health Kit")
+            {
+                RegHeal();
+            }
+
+            if (other.gameObject.tag == "Full Health Kit")
+            {
+                FullHeal();
+            }
         }
+    }
+
+    public void RegHeal()
+    {
+        life += amountHealed;
+    }
+
+    public void FullHeal()
+    {
+        life = 99;
+        life += 100;
     }
 
     public IEnumerator Blinking()

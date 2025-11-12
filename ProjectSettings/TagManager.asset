@@ -6,6 +6,9 @@ TagManager:
   tags:
   - RegularEnemy
   - HardEnemy
+  - Regular Health Kit
+  - Full Health Kit
+  - Jump Pack
   layers:
   - Default
   - TransparentFX
