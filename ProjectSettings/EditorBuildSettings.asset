@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Beauty Yang/Scenes/MainMenu.unity
+    guid: a8c43f78f3cd58c4dac9797c7a73b83b
+  - enabled: 1
+    path: Assets/Beauty Yang/Scenes/GameOver.unity
+    guid: 20e60d7b64c5b4c438142284e59775e9
   m_configObjects: {}
