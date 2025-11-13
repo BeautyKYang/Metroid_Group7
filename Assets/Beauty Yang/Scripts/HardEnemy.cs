@@ -47,7 +47,7 @@ public class HardEnemy : MonoBehaviour
         if (Physics.Raycast(rayOrigin, Vector3.right, out hit, DetectionDistance))
         {
             //Check if raycast hit the player
-            if (hit.transform.GetComponent<PlayerMovement>())
+            if (hit.transform.GetComponent<Player_Movement>())
             {
                 targetPos = hit.transform.position; //Stores the Player position
                 isMoving = true;
@@ -58,7 +58,7 @@ public class HardEnemy : MonoBehaviour
         if (Physics.Raycast(rayOrigin, Vector3.left, out hit, DetectionDistance))
         {
             //Check if raycast hit the player
-            if (hit.transform.GetComponent<PlayerMovement>())
+            if (hit.transform.GetComponent<Player_Movement>())
             {
                 targetPos = hit.transform.position; //Stores the Player position
                 isMoving = true;
