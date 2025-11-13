@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2679845793929104406, guid: b24b221dcdabcf441ad8b4f97759bf88, type: 3}
+      propertyPath: HeavyBullet
+      value: 
+      objectReference: {fileID: 6343821354344622807, guid: 4d1c4d10677c34445b3c013dceb07238, type: 3}
     - target: {fileID: 2840022909402627485, guid: b24b221dcdabcf441ad8b4f97759bf88, type: 3}
       propertyPath: m_Name
       value: Player
@@ -198,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6505729723472512834, guid: 363b5ec59c8eb314da80804419a839cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.88
+      value: 2.69
       objectReference: {fileID: 0}
     - target: {fileID: 6505729723472512834, guid: 363b5ec59c8eb314da80804419a839cf, type: 3}
       propertyPath: m_LocalPosition.z

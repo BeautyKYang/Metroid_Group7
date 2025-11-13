@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Cinemachine.DocumentationSortingAttribute;
-
+/*
+Lanajade Dalman
+11/12/25
+teleports player to another level
+ */
 public class Portal : MonoBehaviour
 {
     public GameObject spawnPoint;

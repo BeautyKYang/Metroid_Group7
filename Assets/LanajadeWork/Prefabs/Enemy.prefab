@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 653560758129509217}
   - component: {fileID: 7372726805819869672}
   - component: {fileID: 2892207669903133475}
+  - component: {fileID: 2979626138148482243}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: RegularEnemy
@@ -105,3 +106,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2979626138148482243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678252106649250546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d33517f07b8eea4bb2b1d0fe3e36fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  lives: 1
+  leftBounds: 10
+  rightBounds: 15
+  moveDirection: {x: 0, y: 0, z: 0}
+  speed: 5
